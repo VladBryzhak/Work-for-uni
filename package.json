@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/project-MasterchefRecipes/",
+    "build": "vite build --base=/Work-for-uni/",
     "preview": "vite preview"
   },
   "devDependencies": {
