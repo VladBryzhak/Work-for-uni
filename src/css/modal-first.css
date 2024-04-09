@@ -1,0 +1,356 @@
+/**
+  |============================
+  | стилі галереї BasickLightbox
+  |============================
+*/
+.basicLightbox {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0.01;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+  will-change: opacity;
+}
+.basicLightbox--visible {
+  opacity: 1;
+}
+.basicLightbox__placeholder {
+  max-width: 100%;
+  transform: scale(0.9);
+  transition: transform 0.4s ease;
+  z-index: 1;
+  will-change: transform;
+}
+.basicLightbox__placeholder > iframe:first-child:last-child,
+.basicLightbox__placeholder > img:first-child:last-child,
+.basicLightbox__placeholder > video:first-child:last-child {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 95%;
+  max-height: 95%;
+}
+.basicLightbox__placeholder > iframe:first-child:last-child,
+.basicLightbox__placeholder > video:first-child:last-child {
+  pointer-events: auto;
+}
+.basicLightbox__placeholder > img:first-child:last-child,
+.basicLightbox__placeholder > video:first-child:last-child {
+  width: auto;
+  height: auto;
+}
+.basicLightbox--iframe .basicLightbox__placeholder,
+.basicLightbox--img .basicLightbox__placeholder,
+.basicLightbox--video .basicLightbox__placeholder {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.basicLightbox--visible .basicLightbox__placeholder {
+  transform: scale(1);
+}
+/**
+  |============================
+  | Стилі елементів модального вікна
+  |============================
+*/
+.modal-frame {
+  max-width: 335px;
+  max-height: 95vh;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background: #fff;
+  padding: 40px 20px 40px 20px;
+  overflow: auto;
+  position: relative;
+}
+.modal-frame::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-frame::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-frame::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background: rgba(5, 5, 5, 0.18);
+  padding: 20px 0;
+}
+@media only screen and (min-width: 768px) {
+  .modal-frame {
+    padding: 32px;
+    max-width: 531px;
+  }
+}
+.on-close {
+  fill: black;
+}
+.icon-list-modal {
+  display: flex;
+  margin-right: 16px;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .icon-list-modal {
+    margin-right: 8px;
+  }
+}
+.icon-rating-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dish-title {
+  margin-top: 20px;
+  color: var(--primary-color);
+
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .dish-title {
+    margin-top: 0;
+    justify-content: left;
+  }
+}
+.rait-container {
+  display: flex;
+  margin-top: 14px;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .rait-container {
+    margin-top: 0px;
+  }
+}
+.recipe-rating {
+  margin-right: 6px;
+}
+.recipe-box-text {
+  color: var(--secondary-color);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+.ingredients-container {
+  margin-top: 33px;
+}
+.ingredients-container-box {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.ingredients-container-box::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(5, 5, 5, 0.1);
+}
+.ingredients-container-box:not(:first-child) {
+  margin-top: 20px;
+}
+.modal-close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+  padding: 0;
+
+  color: var(--white-color);
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  transition: color var(--transition-dur-timing-func);
+}
+@media only screen and (min-width: 768px) {
+  .modal-close-button {
+    top: 16px;
+    right: 16px;
+  }
+}
+.modal-close-icon {
+  stroke: var(--primary-color);
+}
+.tag-container {
+  margin-top: 48px;
+  display: flex;
+
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tag {
+  padding: 8px 16px;
+  border-radius: 35px;
+  border: 1px solid rgba(5, 5, 5, 0.2);
+  font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .tag-container {
+    min-width: 265px;
+    margin-top: 0;
+    gap: 4px;
+  }
+}
+.dish-instructions {
+  margin-top: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .dish-instructions {
+    margin-top: 40px;
+  }
+}
+.btn-container {
+  display: flex;
+  gap: 14px;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .btn-container {
+    gap: 16px;
+  }
+}
+.btn-modal-general {
+  padding: 12px 24px;
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 15px;
+  border: 1px solid var(--green-color);
+}
+@media only screen and (min-width: 768px) {
+  .btn-modal-general {
+    padding: 14px 28px;
+  }
+}
+
+.btn-modal-first {
+  background: var(--green-color);
+  color: var(--white-color);
+  transition: color var(--transition-dur-timing-func);
+}
+
+.btn-modal-first:hover {
+  color: var(--primary-color);
+}
+.btn-modal-first.active {
+  color: var(--white-color);
+}
+.btn-modal-first.active:hover {
+  color: var(--primary-color);
+}
+
+.btn-modal-secont {
+  background-color: var(--white-color);
+  transition: color var(--transition-dur-timing-func),
+    background var(--transition-dur-timing-func);
+}
+@media (hover: hover) {
+  .btn-modal-secont:hover,
+  .btn-modal-secont:focus {
+    background: var(--green-color);
+    color: var(--white-color);
+  }
+}
+
+@media not (hover: hover) {
+  .btn-modal-secont:active {
+    background: var(--green-color);
+    color: var(--white-color);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .swap-container {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 32px;
+  }
+
+  .swap-container > div {
+    flex: 1;
+    text-align: center;
+  }
+
+  .swap-container > div:last-child {
+    order: -1;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .swap-container-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 32px;
+  }
+
+  .swap-container-top > div {
+    flex: 1;
+  }
+
+  .swap-container-top > div:last-child {
+    order: -1;
+  }
+}
+.iframeContainer {
+  max-width: 295px;
+  max-height: 295px;
+  border-radius: 8px;
+  background: linear-gradient(
+    0deg,
+    rgba(5, 5, 5, 0.4) 0%,
+    rgba(5, 5, 5, 0.4) 100%
+  );
+}
+@media screen and (max-width: 320px) {
+  .iframeContainer {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .iframeContainer {
+    max-width: 467px;
+    max-height: 250px;
+    margin-top: 16px;
+  }
+}
+.icon-rating {
+  height: 18px;
+}
+.icon-rating.checked.modal-icon {
+  fill: #eea10c;
+}
+
+.icon-rating.unchecked.modal-icon {
+  fill: rgba(5, 5, 5, 0.4);
+  opacity: 0.2;
+}

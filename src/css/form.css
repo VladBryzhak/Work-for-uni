@@ -1,0 +1,303 @@
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+@media only screen and (min-width: 768px) {
+  .search-form {
+    gap: 16px;
+  }
+}
+.search-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.17;
+  gap: 8px;
+}
+
+.dark-theme .search-container{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-form {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    outline: transparent;
+    border-radius: 15px;
+    border: 1px solid rgba(5, 5, 5, 0.2);
+    
+}
+@media only screen and (min-width: 768px) {
+  .search-container {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .input-form {
+    font-size: 16px;
+  }
+}
+.dark-theme .input-form{
+    color: #fff;
+    background-color: rgb(22, 22, 22);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Пошук за назвою рецепта */
+
+.search-overlay {
+  position: relative;
+}
+
+.icon-search {
+  position: absolute;
+  left: 18px;
+  top: 14px;
+  transition: fill var(--transition-dur-timing-func)
+}
+.dark-theme .icon-search{
+    fill: rgba(255, 255, 255, 0.2);
+}
+.input-search {
+  width: 100%;
+  height: 46px;
+  padding: 14px 122px 14px 48px;
+}
+@media only screen and (min-width: 375px) {
+  .input-search {
+    width: 335px;
+    height: 46px;
+    padding: 14px 122px 14px 48px;   
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .input-search {
+    width: 278px;
+    height: 48px;
+  }
+}
+.input-search:not(:placeholder-shown) + .icon-search {
+    fill: var(--green-color);
+}
+.dark-theme .input-search:not(:placeholder-shown) + .icon-search {
+    fill: var(--green-color);}
+
+.label-form:hover .icon-search,
+.label-form:focus .icon-search {
+  fill: var(--green-color);
+}
+
+.btn-close-search {
+  width: 18px;
+  height: 18px;
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background-color: var(--background-color);
+}
+.dark-theme .btn-close-search{
+    background-color: rgb(22, 22, 22);
+}
+
+.icon-close-search {
+  stroke: rgba(5, 5, 5, 0.8);
+}
+
+/* Пошук за часом приготування */
+
+.input-time {
+  width: 160px;
+  height: 46px;
+  padding: 14px 18px;
+}
+@media only screen and (min-width: 768px) {
+  .input-time {
+    width: 125px;
+    height: 48px;
+  }
+}
+
+.btn-chevron-down {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background-color: var(--background-color);    
+}
+.dark-theme .btn-chevron-down{
+    background-color:  rgb(22, 22, 22);
+}
+
+.icon-chevron-down {
+  stroke: var(--secondary-color);
+}
+.dark-theme .icon-chevron-down,
+.dark-theme .icon-close-search{
+    stroke: rgba(255, 255, 255, 0.50);
+}
+
+.form-select {
+    position: absolute;
+    margin: 0;
+    padding: 14px 0 0 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    outline: transparent;
+    border: none;
+    border-radius: 14px;
+    color: var(--secondary-color);
+    background-color: #fff;
+    box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
+    overflow-y: scroll;
+    z-index: 100;
+ 
+}
+.dark-theme .form-select{
+  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--primary-color);
+}
+
+.form-select::-webkit-scrollbar {
+    width: 6px;   
+}
+
+.form-select::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 4px;
+}
+  
+.form-select::-webkit-scrollbar-thumb  {
+    
+    border-radius: 12px;
+    background: rgba(5, 5, 5, 0.10);
+    padding: 10px;
+}
+
+.dark-theme .form-select::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.select-time {
+  width: 160px;
+  height: 124px;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+   .select-time{
+    width: 125px;
+    height: 128px;
+  }
+}
+
+/* Пошук за країною походження */
+.input-area {
+  width: 161px;
+  height: 46px;
+  padding: 14px 18px;
+}
+@media only screen and (min-width: 768px) {
+  .input-area {
+    width: 141px;
+    height: 48px;
+  }
+}
+.select-area {
+  width: 161px;
+  height: 176px;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+   .select-area{
+    width: 141px;
+    height: 188px;
+  }
+}
+
+/* Пошук за інгридієнтами */
+.input-ingredients {
+  width: 188px;
+  height: 46px;
+  padding: 14px 18px;
+}
+@media only screen and (min-width: 768px) {
+  .input-ingredients {
+    width: 188px;
+    height: 48px;
+  }
+}
+
+.select-ingredients {
+  width: 188px;
+  height: 176px;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .select-ingredients {
+    height: 188px;
+  }
+}
+
+.active {
+  color: var(--primary-color);
+}
+
+.dark-theme .active {
+    color: #fff;}
+
+.option-form:active {
+  color: var(--primary-color);
+}
+
+/* Блок скидання пошуку */
+.reset-block {
+  margin: 14px 0 20px 0;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 4px;
+}
+@media only screen and (min-width: 768px) {
+  .reset-block {
+    margin-bottom: 14px;
+  }
+}
+
+.btn-reset-filter {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background-color: var(--background-color);
+}
+.dark-theme .btn-reset-filter{
+    background-color: transparent;
+}
+
+.icon-reset-search {
+  stroke: var(--green-color);
+}
+
+.reset-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+.dark-theme .reset-text{
+    color: rgba(255, 255, 255, 0.5);
+}

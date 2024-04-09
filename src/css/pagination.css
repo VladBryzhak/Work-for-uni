@@ -1,0 +1,59 @@
+@import url('./styles.css');
+
+div .tui-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tui-page-btn {
+  
+  color: var(--primary-color) !important;
+  font-family: Inter;
+  
+  font-weight: 600 !important;
+  line-height: 1.22 !important;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.tui-pagination .tui-next {
+  margin-left: 0px !important;
+}
+.tui-is-selected {
+  background-color: var(--green-color) !important;
+  border: 1px solid var(--green-color) !important;
+}
+
+.tui-is-disabled {
+  background-color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color) !important;
+}
+@media only screen and (max-width: 470px) {
+  .tui-page-btn {
+    width:  40px !important;
+    height:  40px !important;
+    padding: 8px 0 6px !important;
+    margin-right: 4px !important;
+    font-size: 12px !important;
+  }
+  
+  .tui-ico-ellip {
+    height: 18px !important;
+  }
+}
+
+@media only screen and (min-width: 471px) {
+  .tui-page-btn {
+    width: 44px !important;
+    height: 44px !important;
+    padding: 8px 0 6px !important;
+    margin-right: 15px !important;
+    font-size: 18px !important;
+  }
+  .tui-ico-ellip {
+    height: 18px !important;
+  }
+}

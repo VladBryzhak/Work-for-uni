@@ -1,0 +1,277 @@
+body.dark-theme {
+  background-color: var(--dark-theme-background);
+  color: var(--white-color);
+}
+
+/* ----------- HEADER ----------- */
+
+.dark-theme .logo {
+  color: var(--white-color);
+}
+
+.dark-theme .mobile-menu {
+  background-color: var(--primary-color);
+}
+
+.dark-theme .header-chart-icon {
+  stroke: var(--white-color);
+}
+.dark-theme .mobile-menu-open-icon {
+  stroke: var(--white-color);
+}
+
+.dark-theme .registration-btn-icon {
+  stroke: var(--white-color);
+}
+
+/* ----------- HEADER ----------- */
+
+/* ----------- CATEGORIES ----------- */
+.dark-theme .categories-btn {
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--btn-light-color);
+}
+
+.dark-theme .categories-btn.active {
+  color: var(--white-color);
+}
+
+.dark-theme .categories-btn:hover,
+.dark-theme .categories-btn:focus {
+  color: var(--white-color);
+}
+
+.dark-theme .category-item {
+  color: var(--btn-light-color);
+}
+
+.dark-theme .category-item:hover,
+.dark-theme .category-item:focus {
+  color: var(--green-color);
+}
+
+.dark-theme .categories-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(214, 214, 214, 0.18);
+}
+
+/* ----------- POPULAR ----------- */
+
+.dark-theme .popular-title {
+  color: #fff;
+}
+
+.dark-theme .item-title {
+  color: #fff;
+}
+
+.dark-theme .item-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dark-theme .item-text:hover,
+.dark-theme .item-text:focus {
+  color: var(--green-color);
+}
+
+.dark-theme .item-title:hover,
+.dark-theme .item-title:focus {
+  color: var(--green-color);
+}
+
+/* ----------- POPULAR ----------- */
+
+/* ----------- ORDER MODAL ----------- */
+
+.dark-theme .modal {
+  background: var(--primary-color);
+}
+
+.dark-theme .ord-title {
+  color: #fff;
+}
+
+.dark-theme .label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme .send-button {
+  color: var(--white-color);
+}
+
+.dark-theme .ord-close-icon {
+  stroke: var(--white-color);
+}
+
+.dark-theme .input {
+  background: var(--primary-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .comment {
+  color: var(--white-color);
+  background: var(--primary-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ----------- ORDER MODAL ----------- */
+
+/* -----------  MODAL RATING   ----------- */
+.dark-theme .modal-rating-form {
+  background-color: var(--primary-color);
+}
+.dark-theme .modal-rating-head {
+  color: var(--white-color);
+}
+.dark-theme .modal-rating-counter {
+  color: var(--white-color);
+}
+.dark-theme .modal-rating-close-btn {
+  stroke: var(--white-color);
+}
+.dark-theme .modal-rating-email-in-input {
+  color: rgba(255, 255, 255, 0.5);
+}
+.dark-theme .modal-rating-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.dark-theme .modal-rating-btn:hover {
+  color: var(--white-color);
+}
+
+/* -----------  MODAL RECIPE DTAILS  ----------- */
+.dark-theme .modal-frame {
+  background: #050505;
+}
+.dark-theme .modal-close-icon {
+  stroke: #fff;
+}
+.dark-theme .tag {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dark-theme .dish-title {
+  color: var(--white-color);
+}
+.dark-theme .ingredient-measure {
+  color: rgba(255, 255, 255, 0.5);
+}
+.dark-theme .recipe-box-text {
+  color: rgba(255, 255, 255, 0.5);
+}
+.dark-theme .btn-modal-secont {
+  color: var(--white-color);
+  background: #050505;
+}
+.dark-theme .ingredients-container-box::after {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* ----------- REGISTRATION MODAL ----------- */
+
+.dark-theme .modal {
+  background: var(--primary-color);
+}
+
+.dark-theme .reg-title {
+  color: #fff;
+}
+
+.dark-theme .label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme .sign-name {
+  background: var(--primary-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .sign-password {
+  background: var(--primary-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dark-theme .show-password {
+  color: var(--btn-light-color);
+}
+.dark-theme .reg-close-icon {
+  stroke: var(--white-color);
+}
+.dark-theme .icon-rating.unchecked.modal-icon {
+  fill: rgba(255, 255, 255, 0.4);
+}
+
+.dark-theme .input {
+  color: var(--white-color);
+}
+
+/* ----------- REGISTRATION MODAL ----------- */
+
+/* ----------- FOOTER ----------- */
+
+.dark-theme .social-icon {
+  stroke: var(--white-color);
+}
+
+/* ----------- FOOTER ----------- */
+
+/* ---------- HERO ----------- */
+
+.dark-theme .hero-btn {
+  color: #fff;
+}
+.dark-theme
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background: var(--swiper-pagination-bullet-inactive-color, white);
+}
+.dark-theme
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet-active {
+  background: var(--swiper-pagination-color, var(--green-color));
+}
+/* ---------- HERO ----------- */
+/* ----------- FAVORITES PAGE ----------- */
+
+.dark-theme .fav-body {
+  background-color: var(--dark-theme-background);
+}
+
+.dark-theme .empty-section-text {
+  color: var(--white-color);
+}
+
+.dark-theme .fav-category-btn {
+  border: 1px solid var(--btn-light-color);
+  color: var(--btn-light-color);
+}
+
+/* ----------- FOOTER ----------- */
+
+.dark-theme .footer-container {
+  border-top: none;
+}
+
+/* ----------- FOOTER ----------- */
+
+.dark-theme .tui-page-btn {
+  color: var(--white-color) !important;
+  border-color: var(--btn-light-color) !important;
+}
+
+.dark-theme .tui-page-btn:hover {
+  color: var(--primary-color) !important;
+}
+
+.dark-theme .tui-page-btn.tui-first.tui-is-disabled,
+.dark-theme .tui-page-btn.tui-prev.tui-is-disabled,
+.dark-theme .tui-page-btn.tui-last.tui-is-disabled,
+.dark-theme .tui-page-btn.tui-next.tui-is-disabled {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.dark-theme .tui-page-btn.tui-first,
+.dark-theme .tui-page-btn.tui-prev,
+.dark-theme .tui-page-btn.tui-last,
+.dark-theme .tui-page-btn.tui-next {
+  background-color: var(--green-color) !important;
+  border-color: var(--green-color) !important;
+}

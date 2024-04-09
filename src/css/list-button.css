@@ -1,0 +1,127 @@
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .button-container {
+    gap: 30px;
+  }
+}
+
+.categories-btn {
+  padding: 14px 28px;
+  width: fit-content;
+
+  border-radius: 15px;
+  border: 1px solid rgba(5, 5, 5, 0.2);
+
+  background-color: transparent;
+
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.15;
+
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.categories-btn.active {
+  background-color: var(--green-color);
+  border-color: var(--green-color);
+  color: var(--white-color);
+}
+.categories-wrapper {
+  overflow-y: scroll;
+}
+
+.categories-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.categories-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.categories-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background: rgba(5, 5, 5, 0.18);
+}
+
+.category-item {
+  color: rgba(5, 5, 5, 0.3);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.category-link.active {
+  color: var(--green-color);
+}
+@media (hover: hover) {
+  .categories-btn:hover,
+  .categories-btn:focus {
+    background-color: var(--green-color);
+    border-color: var(--green-color);
+    color: var(--white-color);
+  }
+  .category-item:hover,
+  .category-item:focus {
+    color: var(--green-color);
+  }
+}
+
+@media not (hover: hover) {
+  .categories-btn:active {
+    background-color: var(--green-color);
+    border-color: var(--green-color);
+    color: var(--white-color);
+  }
+  .category-item:active {
+    color: var(--green-color);
+  }
+}
+.categories-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100vw - 40px);
+  height: 198px;
+}
+@media screen and (max-width: 767px) {
+  .categories-wrapper {
+    
+    gap: 18px;
+    width: 326px;
+  }
+
+  .categories-wrapper::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .categories-wrapper {
+    gap: 24px;
+    width: 176px;
+    height: 416px;
+  }
+  .button-container {
+    padding-top: 26px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .button-container {
+    gap: 42px;
+  }
+  .categories-wrapper {
+    width: 235px;
+  }
+}
