@@ -1,6 +1,6 @@
 // ------------ Розмітка картки страви -----
 import { load } from './storage-service';
-import heartImg from '../img/icons.svg#heart_1';
+import { heartImg } from '../img/icons.svg#icon-heart';
 import starImg from '../img/icons.svg#star';
 
 const storageArr = load('favRecipes');
